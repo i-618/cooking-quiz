@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Right or Wrong: Indian Cooking Techniques</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <div class="presentation-header">
+                <h1 class="presentation-title">Right or Wrong</h1>
+                <h2 class="presentation-subtitle">Indian Cooking Techniques</h2>
+                <p class="presentation-description">
+                    Test your knowledge of healthy Indian cooking practices with scientifically-backed insights
+                </p>
+                <button class="btn btn--primary btn--lg" id="start-btn">Begin Quiz</button>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <span class="progress-text" id="progress-text">Question 1 of 12</span>
+                </div>
+            </div>
+
+            <div class="quiz-content">
+                <div class="statement-card card">
+                    <div class="card__body">
+                        <h3 class="statement-text" id="statement-text">Loading...</h3>
+                        
+                        <div class="answer-buttons" id="answer-buttons">
+                            <button class="btn answer-btn answer-btn--right" id="right-btn">
+                                <span class="btn-text">RIGHT</span>
+                            </button>
+                            <button class="btn answer-btn answer-btn--wrong" id="wrong-btn">
+                                <span class="btn-text">WRONG</span>
+                            </button>
+                        </div>
+
+                        <div class="explanation-container hidden" id="explanation-container">
+                            <div class="explanation-content">
+                                <div class="answer-feedback" id="answer-feedback"></div>
+                                
+                                <div class="explanation-section">
+                                    <h4 class="explanation-title when-right-title">When This Statement is RIGHT:</h4>
+                                    <p class="explanation-text" id="when-right-text"></p>
+                                </div>
+
+                                <div class="explanation-section">
+                                    <h4 class="explanation-title when-wrong-title">When This Statement is WRONG:</h4>
+                                    <p class="explanation-text" id="when-wrong-text"></p>
+                                </div>
+
+                                <div class="explanation-section">
+                                    <h4 class="explanation-title scientific-title">Scientific Backing:</h4>
+                                    <p class="explanation-text" id="scientific-text"></p>
+                                </div>
+
+                                <div class="explanation-section">
+                                    <h4 class="explanation-title recommendation-title">Recommendation:</h4>
+                                    <p class="explanation-text" id="recommendation-text"></p>
+                                </div>
+
+                                <button class="btn btn--primary" id="next-btn">Next Question</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen">
+            <div class="results-content">
+                <h2 class="results-title">Quiz Complete!</h2>
+                <p class="results-description">
+                    You've completed all 12 questions about Indian cooking techniques. 
+                    We hope you learned something valuable about healthy cooking practices!
+                </p>
+                <div class="results-actions">
+                    <button class="btn btn--primary btn--lg" id="restart-btn">Start Over</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
